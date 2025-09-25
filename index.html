@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>corner menu</title>
+    <script src="https://kit.fontawesome.com/e8ed25e8c3.js" crossorigin="anonymous"></script>
+    <style>
+      body,
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      .corner-menu {
+        position: fixed;
+        bottom: 16px;
+        right: 16px;
+      }
+      .menu-btn {
+        display: block;
+        width: 56px;
+        height: 56px;
+        background: linear-gradient(120deg, rgba(42, 123, 155, 1) 50%, rgba(87, 199, 133, 1) 100%);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        border-radius: 50%;
+        color: #ffff;
+        text-align: center;
+        line-height: 3.8;
+      }
+      .corner-menu::after {
+        content: "";
+        display: block;
+        width: 56px;
+        height: 56px;
+        background: linear-gradient(142deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 70%);
+        position: absolute;
+        border-radius: 50%;
+        top: 0;
+        right: 0;
+        z-index: -2;
+      }
+      .active::after{
+         transform: scale3d(5.5, 5.5, 1);
+        transition: cubic-bezier(0.68, 1.5, 0.25, 1);
+      }
+
+      .active .menu-btn {
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+        background: linear-gradient(142deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 80%);
+
+      }
+      .corner-menu .menu-btn:active {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+      }
+      .corner-menu .menu-btn i {
+        font-size: 18px;
+        transition: transform 0.2s;
+      }
+      .active .menu-btn i {
+        transform: rotate(-45deg);
+      }
+       .corner-menu .items-wrapper .menu-item {
+        position: absolute;
+        top: 3px;
+        right: 3px;
+        display: block;
+        width: 48px;
+        height: 48px;
+        color: #fff;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 3;
+        z-index: -1;
+        background-color: rgba(0,0,0,.1);
+        transition: transform .3s ease, background-color .2s linear;
+      }
+          .corner-menu .items-wrapper .menu-item:hover{
+        background-color: rgba(0,0,0,.3);
+
+      }
+      .active .items-wrapper .menu-item:nth-child(1){
+        transform: translate3d(1em, -7em,0);
+      }
+        .active .items-wrapper .menu-item:nth-child(2){
+        transform: translate3d(-3.5em, -6.5em,0);
+      }
+        .active .items-wrapper .menu-item:nth-child(3){
+        transform: translate3d(-6.5em, -3.2em,0);
+      }
+        .active .items-wrapper .menu-item:nth-child(4){
+        transform: translate3d(-7em, 1em,0);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="corner-menu" id="corner-menu">
+      <a class="menu-btn"> <i class="fa fa-plus"></i></a>
+      <nav class="items-wrapper">
+        <a href="#" class="menu-item fa fa-home"></a>
+        <a href="#" class="menu-item fa fa-user"></a>
+        <a href="#" class="menu-item fa fa-chart-pie"></a>
+        <a href="#" class="menu-item fa fa-cog"></a>
+      </nav>
+    </div>
+ <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function(){
+        $('.menu-btn').click(function(){
+          $('#corner-menu').toggleClass('active');
+        });
+      });
+
+    </script>
+  </body>
+</html>
