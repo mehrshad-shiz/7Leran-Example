@@ -1,0 +1,18 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title pug.js Demo
+    body 
+        main.container 
+            .row
+                .col-lg-12#test 
+                    div 
+                        img(src="test.jpg", alt="")
+        h1 Example 
+        -var numbers = ['one','two','three']
+        ul
+            for number in numbers
+                li=number
+        
