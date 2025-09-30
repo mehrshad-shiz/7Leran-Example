@@ -1,0 +1,19 @@
+@mixin style($font-size){
+    font: {
+        size: $font-size;
+        weight: 500;
+        style: Arial;
+    }
+    color: violet;
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+}
+.text{
+ @include style(30px)
+}
+@media screen and (max-width: 992px) {
+    .text{
+        @include style(18px)
+    }
+}

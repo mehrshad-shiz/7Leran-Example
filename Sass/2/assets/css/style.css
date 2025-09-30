@@ -1,0 +1,21 @@
+.text {
+  font-size: 30px;
+  font-weight: 500;
+  font-style: Arial;
+  color: violet;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 992px) {
+  .text {
+    font-size: 18px;
+    font-weight: 500;
+    font-style: Arial;
+    color: violet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}/*# sourceMappingURL=style.css.map */
