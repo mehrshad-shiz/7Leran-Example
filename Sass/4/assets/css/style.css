@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  background-color: #e4f1fa;
+}
+body a {
+  text-decoration: none;
+}
+
+.card-music {
+  width: 400px;
+  margin: 100px auto;
+  background-color: #ffffff;
+  border-radius: 15px;
+}
+.card-music .card-img {
+  position: relative;
+  border-radius: 15px 15px 5px 5px;
+  overflow: hidden;
+}
+.card-music .card-img .menu {
+  position: absolute;
+  top: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  left: 20px;
+}
+.card-music .card-img .search {
+  position: absolute;
+  top: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  right: 20px;
+}
+.card-music .card-img .img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.card-music .card-img .input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.5);
+}
+.card-music .card-img .input input {
+  width: 90%;
+  height: 5px;
+  accent-color: #4790c5;
+}
+.card-music .card-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.card-music .card-body .music-name {
+  font-size: 27.2px;
+  font-weight: 100;
+  line-height: 20px;
+  margin: 30px 0 15px 0;
+  color: #4790c5;
+}
+.card-music .card-body .artist-name {
+  font-size: 16px;
+  color: #717171;
+}
+.card-music .card-body .pause-play {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-music .card-body .pause-play span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  margin: 20px 10px;
+}
+.card-music .card-body .pause-play .play {
+  width: 80px;
+  height: 80px;
+  font-size: 32px;
+}
+.card-music .card-body .other-icon i {
+  font-size: 22.4px;
+  margin: 30px;
+}/*# sourceMappingURL=style.css.map */
